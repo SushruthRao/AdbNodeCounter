@@ -1,9 +1,7 @@
 const express = require('express');
 const admin = require('firebase-admin');
-require('dotenv').config(); // Load environment variables from .env
+const serviceAccount = require('./serviceAccountKey.json');
 
-// Initialize Firebase Admin with service account key from environment variable
-const serviceAccount = JSON.parse(process.env.FIREBASE_SERVICE_ACCOUNT);
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount),
   databaseURL: 'https://instacount-84df9-default-rtdb.asia-southeast1.firebasedatabase.app'
