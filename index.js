@@ -10,7 +10,7 @@ admin.initializeApp({
 
 const db = admin.database();
 const app = express();
-const PORT = process.env.SERVER_PORT; // You can choose any port you like
+const PORT = process.env.PORT; // You can choose any port you like
 
 // Middleware to parse JSON requests
 app.use(express.json());
